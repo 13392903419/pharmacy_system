@@ -103,7 +103,7 @@
                                             </c:otherwise>
                                         </c:choose>
                                     </td>
-                                    <td><fmt:formatDate value="${order.createdAt}" pattern="yyyy-MM-dd HH:mm"/></td>
+                                    <td>${order.createdAt}</td>
                                     <td>
                                         <div style="display: flex; gap: 8px;">
                                             <a href="${pageContext.request.contextPath}/sales/edit/${order.salesId}"

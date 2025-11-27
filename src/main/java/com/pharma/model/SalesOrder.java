@@ -2,7 +2,6 @@ package com.pharma.model;
 
 import lombok.Data;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
@@ -13,7 +12,7 @@ public class SalesOrder {
     private Integer employeeId;
     private BigDecimal totalAmount;
     private String status;
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
+    private String createdAt;
+    private String updatedAt;
     private List<SalesOrderDetail> details;
 }

@@ -8,7 +8,7 @@ import java.util.List;
 
 @Mapper
 public interface SalesMapper {
-        @Select("SELECT sales_id AS salesId, sales_code AS salesCode, customer_id AS customerId, employee_id AS employeeId, total_amount AS totalAmount, status, created_at AS createdAt, updated_at AS updatedAt FROM sales_order WHERE sales_code LIKE CONCAT('%', #{keyword}, '%') ORDER BY created_at DESC LIMIT #{offset}, #{pageSize}")
+        @Select("SELECT sales_id AS salesId, sales_code AS salesCode, customer_id AS customerId, employee_id AS employeeId, total_amount AS totalAmount, status, DATE_FORMAT(created_at, '%Y-%m-%d %H:%i:%s') AS createdAt, DATE_FORMAT(updated_at, '%Y-%m-%d %H:%i:%s') AS updatedAt FROM sales_order WHERE sales_code LIKE CONCAT('%', #{keyword}, '%') ORDER BY created_at DESC LIMIT #{offset}, #{pageSize}")
     List<SalesOrder> selectByPageAndKeyword(@Param("offset") int offset, @Param("pageSize") int pageSize, @Param("keyword") String keyword);
 
     @Select("SELECT COUNT(*) FROM sales_order s WHERE s.sales_code LIKE CONCAT('%', #{keyword}, '%')")

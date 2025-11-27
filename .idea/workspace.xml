@@ -10,13 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="261c18b7-a47a-42c7-bcc5-14edc0338c76" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/ai-chat.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/settings.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pharma/mapper/SalesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pharma/mapper/SalesMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pharma/model/SalesOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pharma/model/SalesOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/sales/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/sales/list.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,7 +302,7 @@
       <workItem from="1758790947150" duration="230000" />
       <workItem from="1759054977619" duration="3149000" />
       <workItem from="1764066805818" duration="2562000" />
-      <workItem from="1764220085330" duration="4100000" />
+      <workItem from="1764220085330" duration="4733000" />
     </task>
     <servers />
   </component>
