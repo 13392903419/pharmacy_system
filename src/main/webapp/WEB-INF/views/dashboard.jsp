@@ -85,19 +85,19 @@
                     <a href="${pageContext.request.contextPath}/medicine/add" style="display: flex; flex-direction: column; align-items: center; padding: 20px; border-radius: var(--border-radius); background: var(--light-bg); text-decoration: none; color: var(--text-primary); transition: all 0.3s ease;">
                         <i class="ri-add-circle-fill" style="font-size: 32px; color: var(--primary-color); margin-bottom: 12px;"></i>
                         <span style="font-weight: 500;">添加药品</span>
-                    </a>
+                </a>
                     <a href="${pageContext.request.contextPath}/sales/add" style="display: flex; flex-direction: column; align-items: center; padding: 20px; border-radius: var(--border-radius); background: var(--light-bg); text-decoration: none; color: var(--text-primary); transition: all 0.3s ease;">
                         <i class="ri-shopping-cart-2-fill" style="font-size: 32px; color: var(--primary-color); margin-bottom: 12px;"></i>
                         <span style="font-weight: 500;">销售开单</span>
-                    </a>
+                </a>
                     <a href="${pageContext.request.contextPath}/purchase/add" style="display: flex; flex-direction: column; align-items: center; padding: 20px; border-radius: var(--border-radius); background: var(--light-bg); text-decoration: none; color: var(--text-primary); transition: all 0.3s ease;">
                         <i class="ri-truck-fill" style="font-size: 32px; color: var(--primary-color); margin-bottom: 12px;"></i>
                         <span style="font-weight: 500;">进货入库</span>
-                    </a>
+                </a>
                     <a href="${pageContext.request.contextPath}/inventory/check" style="display: flex; flex-direction: column; align-items: center; padding: 20px; border-radius: var(--border-radius); background: var(--light-bg); text-decoration: none; color: var(--text-primary); transition: all 0.3s ease;">
                         <i class="ri-search-2-line" style="font-size: 32px; color: var(--primary-color); margin-bottom: 12px;"></i>
                         <span style="font-weight: 500;">库存查询</span>
-                    </a>
+                </a>
                 </div>
             </div>
         </div>
@@ -108,34 +108,34 @@
                     <h3 class="card-title"><i class="ri-time-fill"></i> 最近销售</h3>
                 </div>
                 <div class="card-body">
-                    <c:choose>
-                        <c:when test="${not empty recentSales}">
+                <c:choose>
+                    <c:when test="${not empty recentSales}">
                             <div style="display: flex; flex-direction: column; gap: 12px;">
-                                <c:forEach var="sale" items="${recentSales}">
+                            <c:forEach var="sale" items="${recentSales}">
                                     <div style="padding: 16px; background: var(--light-bg); border-radius: var(--border-radius); border: 1px solid var(--border-color);">
                                         <div style="display: flex; flex-direction: column; gap: 8px;">
                                             <div style="display: flex; justify-content: space-between; align-items: center;">
                                                 <span style="font-weight: 500; color: var(--text-primary);">${sale.salesCode}</span>
                                                 <span style="font-weight: 600; color: var(--success-color);">￥${sale.totalAmount}</span>
-                                            </div>
+                                        </div>
                                             <div style="display: flex; justify-content: space-between; align-items: center;">
                                                 <span class="status ${sale.status == 'completed' ? 'active' : sale.status == 'pending' ? 'pending' : 'inactive'}">
-                                                    ${sale.status == 'completed' ? '已完成' : sale.status == 'pending' ? '待处理' : '已取消'}
-                                                </span>
+                                                ${sale.status == 'completed' ? '已完成' : sale.status == 'pending' ? '待处理' : '已取消'}
+                                            </span>
                                                 <span style="font-size: 12px; color: var(--text-secondary);">${sale.createdAt}</span>
-                                            </div>
                                         </div>
                                     </div>
-                                </c:forEach>
-                            </div>
-                        </c:when>
-                        <c:otherwise>
+                                </div>
+                            </c:forEach>
+                        </div>
+                    </c:when>
+                    <c:otherwise>
                             <div style="text-align: center; color: var(--text-secondary); padding: 40px; font-size: 14px;">
                                 <i class="ri-shopping-bag-line" style="font-size: 48px; color: var(--text-secondary); margin-bottom: 16px;"></i>
                                 <br>最近未销售商品
                             </div>
-                        </c:otherwise>
-                    </c:choose>
+                    </c:otherwise>
+                </c:choose>
                 </div>
             </div>
 
@@ -144,26 +144,26 @@
                     <h3 class="card-title"><i class="ri-alert-fill"></i> 库存预警</h3>
                 </div>
                 <div class="card-body">
-                    <c:choose>
-                        <c:when test="${not empty recentWarnings}">
+                <c:choose>
+                    <c:when test="${not empty recentWarnings}">
                             <div style="display: flex; flex-direction: column; gap: 12px;">
-                                <c:forEach var="warning" items="${recentWarnings}">
+                            <c:forEach var="warning" items="${recentWarnings}">
                                     <div style="padding: 16px; background: var(--light-bg); border-radius: var(--border-radius); border: 1px solid var(--border-color);">
                                         <div style="display: flex; align-items: center; gap: 8px;">
                                             <i class="ri-alert-line" style="color: var(--warning-color);"></i>
                                             <span style="font-weight: 500; color: var(--text-primary);">${warning.medicineName}</span>
-                                        </div>
                                     </div>
-                                </c:forEach>
-                            </div>
-                        </c:when>
-                        <c:otherwise>
+                                </div>
+                            </c:forEach>
+                        </div>
+                    </c:when>
+                    <c:otherwise>
                             <div style="text-align: center; color: var(--text-secondary); padding: 40px; font-size: 14px;">
                                 <i class="ri-check-circle-line" style="font-size: 48px; color: var(--success-color); margin-bottom: 16px;"></i>
                                 <br>没有库存预警
                             </div>
-                        </c:otherwise>
-                    </c:choose>
+                    </c:otherwise>
+                </c:choose>
                 </div>
             </div>
         </div>

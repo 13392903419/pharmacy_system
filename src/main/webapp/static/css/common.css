@@ -4,11 +4,11 @@
 
 /* CSS Variables */
 :root {
-    /* Primary Colors */
-    --primary-color: #6366f1;
-    --primary-dark: #4f46e5;
-    --primary-light: #8b5cf6;
-    --primary-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    /* Primary Colors - 医药系统专用配色 */
+    --primary-color: #2563eb;        /* 专业蓝色 */
+    --primary-dark: #1d4ed8;         /* 深蓝色 */
+    --primary-light: #059669;        /* 健康绿色 */
+    --primary-gradient: linear-gradient(135deg, #2563eb 0%, #059669 100%);
     
     /* Neutral Colors */
     --bg-color: #f0f2f5;

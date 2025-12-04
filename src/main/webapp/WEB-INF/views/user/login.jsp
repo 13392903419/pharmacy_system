@@ -38,13 +38,13 @@
             max-width: 400px;
             z-index: 2;
             border: 3px solid;
-            border-image: linear-gradient(135deg, #6366f1 0%, #8b5cf6 60%, #a78bfa 100%) 1;
+            border: 2px solid #2563eb;
             backdrop-filter: blur(10px);
         }
         .system-name {
             text-align: center;
             margin-bottom: 24px;
-            background: linear-gradient(90deg, #6366f1, #8b5cf6, #a78bfa);
+            background: #2563eb;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-size: 30px;
@@ -58,7 +58,7 @@
             font-size: 15px;
         }
         .btn-primary {
-            background: linear-gradient(90deg, #6366f1, #8b5cf6, #a78bfa);
+            background: #2563eb;
             border: none;
             font-weight: bold;
             letter-spacing: 1px;
@@ -66,7 +66,7 @@
             transition: transform 0.2s, box-shadow 0.2s;
         }
         .btn-primary:hover {
-            background: linear-gradient(90deg, #7c3aed, #6366f1);
+            background: #1d4ed8;
             transform: scale(1.04);
             box-shadow: 0 4px 16px rgba(99,102,241,0.18);
         }

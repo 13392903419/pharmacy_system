@@ -59,7 +59,7 @@
         input[type="date"]:focus,
         select:focus {
             outline: none;
-            border-color: #6366f1;
+            border-color: #2563eb;
             box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
         }
         .button-group {
@@ -82,7 +82,7 @@
             font-size: 16px;
         }
         .btn-primary {
-            background-color: #6366f1;
+            background-color: #2563eb;
             color: white;
         }
         .btn-secondary {

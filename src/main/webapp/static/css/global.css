@@ -1,16 +1,17 @@
 /* 全局样式文件 - 医药销售管理系统 */
 :root {
-    --primary-color: #6366f1;
-    --secondary-color: #8b5cf6;
-    --accent-color: #06b6d4;
-    --success-color: #10b981;
-    --warning-color: #f59e0b;
-    --danger-color: #ef4444;
-    --light-bg: #f8fafc;
-    --card-bg: #ffffff;
-    --text-primary: #1e293b;
-    --text-secondary: #64748b;
-    --border-color: #e2e8f0;
+    /* 医药系统专用配色方案 */
+    --primary-color: #2563eb;        /* 专业蓝色 - 主色调 */
+    --secondary-color: #059669;      /* 健康绿色 - 辅助色调 */
+    --accent-color: #0891b2;         /* 医疗青色 - 强调色 */
+    --success-color: #10b981;        /* 保持绿色表示成功 */
+    --warning-color: #f59e0b;        /* 保持橙色表示警告 */
+    --danger-color: #ef4444;         /* 保持红色表示危险 */
+    --light-bg: #f8fafc;             /* 干净的背景色 */
+    --card-bg: #ffffff;              /* 白色卡片背景 */
+    --text-primary: #1e293b;         /* 深灰文字 */
+    --text-secondary: #64748b;       /* 中灰文字 */
+    --border-color: #e2e8f0;         /* 浅灰边框 */
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --border-radius: 8px;
@@ -39,7 +40,7 @@ body {
 /* 侧边栏样式 */
 .sidebar {
     width: var(--sidebar-width);
-    background: linear-gradient(180deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: var(--primary-color);
     color: white;
     padding: 24px;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
@@ -216,7 +217,7 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: var(--primary-color);
     color: white;
 }
 
@@ -282,7 +283,7 @@ body {
 }
 
 .table thead th {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: var(--primary-color);
     color: white;
     padding: 16px;
     font-weight: 600;
@@ -367,7 +368,7 @@ body {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    background: var(--primary-color);
 }
 
 .stat-card:hover {

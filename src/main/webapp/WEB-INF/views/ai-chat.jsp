@@ -19,7 +19,7 @@
         }
         .sidebar {
             width: 250px;
-            background: linear-gradient(180deg, #6366f1 0%, #8b5cf6 100%);
+            background: #2563eb;
             color: white;
             padding: 20px;
         }
@@ -77,7 +77,7 @@
             border-radius: 10px 10px 0 0;
         }
         .chat-header i {
-            color: #6366f1;
+            color: #2563eb;
             font-size: 24px;
         }
         .chat-messages {
@@ -101,7 +101,7 @@
         }
         .message.user {
             align-self: flex-end;
-            background: linear-gradient(135deg, #7c3aed 60%, #a78bfa 100%);
+            background: #7c3aed;
             color: #fff;
             border-bottom-right-radius: 4px;
             text-align: right;
@@ -133,7 +133,7 @@
         }
         .chat-input button {
             padding: 14px 28px;
-            background: linear-gradient(135deg, #6366f1 60%, #8b5cf6 100%);
+            background: #2563eb;
             color: white;
             border: none;
             border-radius: 8px;
@@ -143,7 +143,7 @@
             transition: background 0.3s;
         }
         .chat-input button:hover {
-            background: linear-gradient(135deg, #4f46e5 60%, #7c3aed 100%);
+            background: #4f46e5;
         }
         .suggestions {
             display: flex;

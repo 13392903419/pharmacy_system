@@ -25,7 +25,7 @@
         .system-name {
             text-align: center;
             margin-bottom: 30px;
-            color: #6366f1;
+            color: #2563eb;
             font-size: 24px;
             font-weight: bold;
         }
@@ -36,11 +36,11 @@
             font-size: 14px;
         }
         .btn-success {
-            background: linear-gradient(45deg, #10b981, #059669);
+            background: #10b981;
             border: none;
         }
         .btn-success:hover {
-            background: linear-gradient(45deg, #059669, #047857);
+            background: #059669;
         }
     </style>
 </head>
