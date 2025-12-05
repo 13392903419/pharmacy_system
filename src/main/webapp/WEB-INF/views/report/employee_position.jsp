@@ -37,7 +37,7 @@
             <li><a href="${pageContext.request.contextPath}/ai-chat"><i class="ri-robot-fill"></i>AI助手</a></li>
             <li><a href="${pageContext.request.contextPath}/settings"><i class="ri-settings-3-fill"></i>系统设置</a></li>
         </ul>
-    </div>
+</div>
 
     <!-- 主内容区域 -->
     <div class="main-content">
@@ -268,7 +268,7 @@ function setProgressBarWidths() {
 document.addEventListener('DOMContentLoaded', function() {
     initChart();
     setProgressBarWidths();
-});
+    });
 </script>
 </body>
 </html>

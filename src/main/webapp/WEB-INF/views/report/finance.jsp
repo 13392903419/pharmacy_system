@@ -72,7 +72,7 @@
             <div class="stat-card">
                 <div class="stat-icon">
                     <i class="ri-calculator-fill"></i>
-                </div>
+</div>
                 <div class="stat-content">
                     <div class="stat-value">￥${totalIncome - totalExpense}</div>
                     <div class="stat-label">净利润</div>
@@ -109,7 +109,7 @@
                                     <td style="font-weight: 500;">${item.customerName}</td>
                                     <td style="font-family: monospace; color: var(--primary-color);">${item.salesCode}</td>
                                     <td style="font-weight: 600; color: ${item.amountColor}; font-size: 16px;">
-                                        ￥${item.amountDisplay}
+                ￥${item.amountDisplay}
                                     </td>
                                     <td>${item.createdAt}</td>
                                     <td style="color: var(--text-secondary);">${item.remark}</td>
@@ -129,7 +129,7 @@
                 </div>
             </div>
         </div>
-    </div>
+</div>
 </div>
 
 <script>

@@ -45,10 +45,14 @@ public class AIChatController extends HttpServlet {
 
             // 发送响应
             response.getWriter().write(gson.toJson(chatResponse));
+            System.out.println("DeepSeek AI API调用成功，输入: " + chatRequest.getMessage().substring(0, Math.min(50, chatRequest.getMessage().length())) + "...");
         } catch (Exception e) {
+            System.err.println("DeepSeek AI API调用失败: " + e.getMessage());
+            e.printStackTrace();
+
             // 处理错误
             response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            ChatResponse errorResponse = new ChatResponse("抱歉，发生了错误，请稍后重试。");
+            ChatResponse errorResponse = new ChatResponse("抱歉，AI服务暂时不可用，请稍后重试。错误: " + e.getMessage());
             response.getWriter().write(gson.toJson(errorResponse));
         }
     }
