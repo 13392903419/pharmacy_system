@@ -12,10 +12,13 @@
     <list default="true" id="261c18b7-a47a-42c7-bcc5-14edc0338c76" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pharma/controller/AIChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pharma/controller/AIChatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pharma/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pharma/mapper/EmployeeMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pharma/service/AIChatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pharma/service/AIChatService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/report/employee_position.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/report/employee_position.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/report/finance.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/report/finance.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pharma/servlet/EmployeeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pharma/servlet/EmployeeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pharma/servlet/PurchaseOrderServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pharma/servlet/PurchaseOrderServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pharma/servlet/SalesServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pharma/servlet/SalesServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/settings.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/settings.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -308,7 +311,8 @@
       <workItem from="1764220085330" duration="5598000" />
       <workItem from="1764824320581" duration="6326000" />
       <workItem from="1764845046055" duration="2420000" />
-      <workItem from="1764920536600" duration="1782000" />
+      <workItem from="1764920536600" duration="2394000" />
+      <workItem from="1765193266509" duration="2989000" />
     </task>
     <servers />
   </component>

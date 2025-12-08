@@ -238,7 +238,7 @@
                             <strong>服务器:</strong> Tomcat 9.0
                         </div>
                     </div>
-                </div>
+        </div>
 
                 <!-- 快速操作 -->
                 <div class="card mt-3">
@@ -259,7 +259,7 @@
                             <i class="ri-refresh-line"></i> 系统重置
                         </button>
                     </div>
-                </div>
+        </div>
 
                 <!-- 更新日志 -->
                 <div class="card mt-3">
@@ -275,12 +275,12 @@
                                 <li>• 修复若干bug</li>
                             </ul>
                         </div>
-                    </div>
+                </div>
+                </div>
+                </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
 <!-- 重置确认模态框 -->
 <div class="modal fade" id="resetModal" tabindex="-1">

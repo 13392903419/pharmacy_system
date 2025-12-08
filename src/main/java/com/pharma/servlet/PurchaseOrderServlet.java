@@ -77,7 +77,7 @@ public class PurchaseOrderServlet extends HttpServlet {
                 MedicineMapper medicineMapper = session.getMapper(MedicineMapper.class);
                 
                 List<Supplier> supplierList = supplierMapper.selectByPageAndKeyword(0, 1000, "");
-                List<Employee> employeeList = employeeMapper.selectAll();
+                List<Employee> employeeList = employeeMapper.selectByPosition("采购员");
                 List<Medicine> medicineList = medicineMapper.selectAll();
                 
                 request.setAttribute("supplierList", supplierList);
@@ -101,7 +101,7 @@ public class PurchaseOrderServlet extends HttpServlet {
                 purchaseOrder.setDetails(details);
                 
                 List<Supplier> supplierList = supplierMapper.selectByPageAndKeyword(0, 1000, "");
-                List<Employee> employeeList = employeeMapper.selectAll();
+                List<Employee> employeeList = employeeMapper.selectByPosition("采购专员");
                 List<Medicine> medicineList = medicineMapper.selectAll();
                 
                 request.setAttribute("purchaseOrder", purchaseOrder);
@@ -203,7 +203,7 @@ public class PurchaseOrderServlet extends HttpServlet {
                     MedicineMapper medicineMapper = session.getMapper(MedicineMapper.class);
                     
                     List<Supplier> supplierList = supplierMapper.selectByPageAndKeyword(0, 1000, "");
-                    List<Employee> employeeList = employeeMapper.selectAll();
+                    List<Employee> employeeList = employeeMapper.selectByPosition("采购专员");
                     List<Medicine> medicineList = medicineMapper.selectAll();
                     
                     request.setAttribute("supplierList", supplierList);

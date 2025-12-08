@@ -53,17 +53,17 @@ public class AIChatService {
                 .build();
 
         try {
-            HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
 
             System.out.println("API响应状态码: " + response.statusCode());
 
-            if (response.statusCode() == 200) {
+        if (response.statusCode() == 200) {
                 String responseBody = response.body();
                 System.out.println("DeepSeek API响应: " + responseBody);
 
                 try {
                     JsonNode root = objectMapper.readTree(responseBody);
-                    JsonNode choices = root.path("choices");
+            JsonNode choices = root.path("choices");
 
                     if (choices.isArray() && choices.size() > 0) {
                         JsonNode firstChoice = choices.get(0);

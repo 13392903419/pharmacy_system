@@ -83,6 +83,23 @@ public class EmployeeServlet extends HttpServlet {
             } catch (Exception e) {
                 response.sendError(HttpServletResponse.SC_BAD_REQUEST);
             }
+        } else if (pathInfo.equals("/check-code")) {
+            // AJAX请求：检查员工编码是否重复
+            String employeeCode = request.getParameter("employeeCode");
+            String employeeIdStr = request.getParameter("employeeId");
+            response.setContentType("application/json");
+            response.setCharacterEncoding("UTF-8");
+            
+            try (SqlSession session = sqlSessionFactory.openSession()) {
+                EmployeeMapper mapper = session.getMapper(EmployeeMapper.class);
+                Integer excludeId = (employeeIdStr != null && !employeeIdStr.isEmpty()) 
+                    ? Integer.parseInt(employeeIdStr) : null;
+                int count = mapper.countByEmployeeCode(employeeCode, excludeId);
+                
+                response.getWriter().write("{\"exists\":" + (count > 0) + "}");
+            } catch (Exception e) {
+                response.getWriter().write("{\"exists\":false,\"error\":\"" + e.getMessage() + "\"}");
+            }
         } else {
             response.sendError(HttpServletResponse.SC_NOT_FOUND);
         }
@@ -113,15 +130,39 @@ public class EmployeeServlet extends HttpServlet {
                 employee.setPosition(position);
                 employee.setStatus(status);
                 EmployeeMapper mapper = session.getMapper(EmployeeMapper.class);
+
+                // 检查员工编号是否重复
+                Integer excludeId = employee.getEmployeeId(); // 编辑时排除当前ID，新增时为null
+                System.out.println("检查员工编码重复: 编码=" + employee.getEmployeeCode() + ", 排除ID=" + excludeId);
+                int count = mapper.countByEmployeeCode(employee.getEmployeeCode(), excludeId);
+                System.out.println("找到重复编码数量: " + count);
+                if (count > 0) {
+                    System.out.println("发现重复编码，显示错误信息");
+                    request.setAttribute("error", "员工编码【" + employee.getEmployeeCode() + "】已存在,请使用其他编码!");
+                    request.setAttribute("employee", employee);
+                    request.getRequestDispatcher("/WEB-INF/views/employee/form.jsp").forward(request, response);
+                    return;
+                }
+
                 if (employee.getEmployeeId() == null) {
                     mapper.insert(employee);
                 } else {
                     mapper.update(employee);
                 }
                 session.commit();
+                System.out.println("员工保存成功: " + employee.getEmployeeCode());
                 response.sendRedirect(request.getContextPath() + "/employee");
             } catch (Exception e) {
-                request.setAttribute("error", "保存失败: " + e.getMessage());
+                System.err.println("员工保存失败: " + e.getMessage());
+                e.printStackTrace();
+
+                // 检查是否是数据库约束违反（重复编码）
+                String errorMessage = "保存失败: " + e.getMessage();
+                if (e.getMessage() != null && e.getMessage().toLowerCase().contains("duplicate")) {
+                    errorMessage = "员工编码【" + employee.getEmployeeCode() + "】已存在,请使用其他编码!";
+                }
+
+                request.setAttribute("error", errorMessage);
                 request.setAttribute("employee", employee);
                 request.getRequestDispatcher("/WEB-INF/views/employee/form.jsp").forward(request, response);
             }

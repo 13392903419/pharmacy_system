@@ -18,6 +18,12 @@ public interface EmployeeMapper {
     @Select("SELECT employee_id AS employeeId, employee_code AS employeeCode, name, gender, phone, email, position, status FROM employee WHERE employee_id = #{id}")
     Employee selectById(Integer id);
 
+    @Select("SELECT employee_id AS employeeId, employee_code AS employeeCode, name, gender, phone, email, position, status FROM employee WHERE position = #{position}")
+    List<Employee> selectByPosition(@Param("position") String position);
+
+    @Select("SELECT COUNT(*) FROM employee WHERE employee_code = #{employeeCode} AND (#{excludeId} IS NULL OR employee_id != #{excludeId})")
+    int countByEmployeeCode(@Param("employeeCode") String employeeCode, @Param("excludeId") Integer excludeId);
+
     @Insert("INSERT INTO employee (employee_code, name, gender, phone, email, position, status) VALUES (#{employeeCode}, #{name}, #{gender}, #{phone}, #{email}, #{position}, #{status})")
     @Options(useGeneratedKeys = true, keyProperty = "employeeId")
     void insert(Employee employee);
